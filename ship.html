@@ -1,0 +1,773 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module ship</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>ship</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/sora/Development/School/CS3C/Final%20Project/Final%20Project%20ver8/ship.py">/Users/sora/Development/School/CS3C/Final Project/Final Project ver8/ship.py</a></font></td></tr></table>
+    <p><tt>Reference<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Battleship<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.datagenetics.com/blog/december32011/index.html">https://www.datagenetics.com/blog/december32011/index.html</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Calling&nbsp;parent&nbsp;class&nbsp;__init__&nbsp;with&nbsp;multiple&nbsp;inheritance,&nbsp;what's&nbsp;the&nbsp;right&nbsp;way?<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://stackoverflow.com/questions/9575409/calling-parent-class-init-with-multiple-inheritance-whats-the-right-way">https://stackoverflow.com/questions/9575409/calling-parent-class-init-with-multiple-inheritance-whats-the-right-way</a></tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="pygame.html">pygame</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="ship.html#Fleet">Fleet</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="ship.html#EnemyFleet">EnemyFleet</a>(<a href="ship.html#Fleet">Fleet</a>, <a href="pygame.sprite.html#LayeredUpdates">pygame.sprite.LayeredUpdates</a>)
+</font></dt><dt><font face="helvetica, arial"><a href="ship.html#PlayerFleet">PlayerFleet</a>(<a href="ship.html#Fleet">Fleet</a>, <a href="pygame.sprite.html#LayeredUpdates">pygame.sprite.LayeredUpdates</a>)
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="ship.html#Ship">Ship</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="ship.html#PlayerShip">PlayerShip</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="EnemyFleet">class <strong>EnemyFleet</strong></a>(<a href="ship.html#Fleet">Fleet</a>, <a href="pygame.sprite.html#LayeredUpdates">pygame.sprite.LayeredUpdates</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#EnemyFleet">EnemyFleet</a>(targetGrid)<br>
+&nbsp;<br>
+enemy&nbsp;fleet&nbsp;control&nbsp;by&nbsp;AI<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ship.html#EnemyFleet">EnemyFleet</a></dd>
+<dd><a href="ship.html#Fleet">Fleet</a></dd>
+<dd><a href="pygame.sprite.html#LayeredUpdates">pygame.sprite.LayeredUpdates</a></dd>
+<dd><a href="pygame.sprite.html#AbstractGroup">pygame.sprite.AbstractGroup</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="EnemyFleet-__init__"><strong>__init__</strong></a>(self, targetGrid)</dt><dd><tt>:param&nbsp;targetGrid:&nbsp;TileGrid&nbsp;of&nbsp;fleet&nbsp;is&nbsp;going&nbsp;to&nbsp;be&nbsp;located&nbsp;on</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-checkSunk"><strong>checkSunk</strong></a>(self)</dt><dd><tt>display&nbsp;ship&nbsp;of&nbsp;if&nbsp;has&nbsp;sunk</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-fire"><strong>fire</strong></a>(self)</dt><dd><tt>decide&nbsp;how&nbsp;to&nbsp;find&nbsp;the&nbsp;where&nbsp;to&nbsp;fire&nbsp;and&nbsp;return&nbsp;the&nbsp;finding&nbsp;result.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-markHit"><strong>markHit</strong></a>(self)</dt><dd><tt>add&nbsp;potential&nbsp;targets&nbsp;to&nbsp;list.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-randomFire"><strong>randomFire</strong></a>(self)</dt><dd><tt>randomly&nbsp;fired&nbsp;at&nbsp;empty&nbsp;location</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-removeFiredTargets"><strong>removeFiredTargets</strong></a>(self)</dt><dd><tt>removed&nbsp;targets&nbsp;that&nbsp;are&nbsp;already&nbsp;fired</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-removeTargets"><strong>removeTargets</strong></a>(self)</dt><dd><tt>remove&nbsp;unwanted&nbsp;targets&nbsp;(algorithm&nbsp;improve).</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-targetFire"><strong>targetFire</strong></a>(self)</dt><dd><tt>make&nbsp;a&nbsp;fire&nbsp;from&nbsp;the&nbsp;target&nbsp;list</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DIRECTION</strong> = [(1, 0), (0, 1), (-1, 0), (0, -1)]</dl>
+
+<hr>
+Methods inherited from <a href="ship.html#Fleet">Fleet</a>:<br>
+<dl><dt><a name="EnemyFleet-allSink"><strong>allSink</strong></a>(self)</dt><dd><tt>Check&nbsp;if&nbsp;all&nbsp;ship&nbsp;have&nbsp;sunk</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-createShipsJSON"><strong>createShipsJSON</strong></a>(self)</dt><dd><tt>Write&nbsp;current&nbsp;ship&nbsp;position&nbsp;into&nbsp;JSON&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-processShipsJSON"><strong>processShipsJSON</strong></a>(self, ships_info)</dt><dd><tt>Process&nbsp;ship&nbsp;info&nbsp;read&nbsp;from&nbsp;ships.json&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-readShipsJSON"><strong>readShipsJSON</strong></a>(self)</dt><dd><tt>Read&nbsp;and&nbsp;process&nbsp;ship&nbsp;info&nbsp;from&nbsp;ships.json&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-validateShip"><strong>validateShip</strong></a>(self)</dt><dd><tt>Validate&nbsp;ship&nbsp;position</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ship.html#Fleet">Fleet</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="pygame.sprite.html#LayeredUpdates">pygame.sprite.LayeredUpdates</a>:<br>
+<dl><dt><a name="EnemyFleet-add"><strong>add</strong></a>(self, *sprites, **kwargs)</dt><dd><tt>add&nbsp;a&nbsp;sprite&nbsp;or&nbsp;sequence&nbsp;of&nbsp;sprites&nbsp;to&nbsp;a&nbsp;group<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-add">add</a>(*sprites,&nbsp;**kwargs):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;sprite&nbsp;you&nbsp;add&nbsp;has&nbsp;an&nbsp;attribute&nbsp;_layer,&nbsp;then&nbsp;that&nbsp;layer&nbsp;will&nbsp;be<br>
+used.&nbsp;If&nbsp;**kwarg&nbsp;contains&nbsp;'layer',&nbsp;then&nbsp;the&nbsp;passed&nbsp;sprites&nbsp;will&nbsp;be<br>
+added&nbsp;to&nbsp;that&nbsp;layer&nbsp;(overriding&nbsp;the&nbsp;sprite._layer&nbsp;attribute).&nbsp;If<br>
+neither&nbsp;the&nbsp;sprite&nbsp;nor&nbsp;**kwarg&nbsp;has&nbsp;a&nbsp;'layer',&nbsp;then&nbsp;the&nbsp;default&nbsp;layer&nbsp;is<br>
+used&nbsp;to&nbsp;add&nbsp;the&nbsp;sprites.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-add_internal"><strong>add_internal</strong></a>(self, sprite, layer=None)</dt><dd><tt>Do&nbsp;not&nbsp;use&nbsp;this&nbsp;method&nbsp;directly.<br>
+&nbsp;<br>
+It&nbsp;is&nbsp;used&nbsp;by&nbsp;the&nbsp;group&nbsp;to&nbsp;add&nbsp;a&nbsp;sprite&nbsp;internally.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-change_layer"><strong>change_layer</strong></a>(self, sprite, new_layer)</dt><dd><tt>change&nbsp;the&nbsp;layer&nbsp;of&nbsp;the&nbsp;sprite<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-change_layer">change_layer</a>(sprite,&nbsp;new_layer):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;sprite&nbsp;must&nbsp;have&nbsp;been&nbsp;added&nbsp;to&nbsp;the&nbsp;renderer&nbsp;already.&nbsp;This&nbsp;is&nbsp;not<br>
+checked.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-draw"><strong>draw</strong></a>(self, surface)</dt><dd><tt>draw&nbsp;all&nbsp;sprites&nbsp;in&nbsp;the&nbsp;right&nbsp;order&nbsp;onto&nbsp;the&nbsp;passed&nbsp;surface<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-draw">draw</a>(surface):&nbsp;return&nbsp;Rect_list</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-get_bottom_layer"><strong>get_bottom_layer</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;bottom&nbsp;layer<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-get_bottom_layer">get_bottom_layer</a>():&nbsp;return&nbsp;layer</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-get_layer_of_sprite"><strong>get_layer_of_sprite</strong></a>(self, sprite)</dt><dd><tt>return&nbsp;the&nbsp;layer&nbsp;that&nbsp;sprite&nbsp;is&nbsp;currently&nbsp;in<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;sprite&nbsp;is&nbsp;not&nbsp;found,&nbsp;then&nbsp;it&nbsp;will&nbsp;return&nbsp;the&nbsp;default&nbsp;layer.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-get_sprite"><strong>get_sprite</strong></a>(self, idx)</dt><dd><tt>return&nbsp;the&nbsp;sprite&nbsp;at&nbsp;the&nbsp;index&nbsp;idx&nbsp;from&nbsp;the&nbsp;groups&nbsp;sprites<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-get_sprite">get_sprite</a>(idx):&nbsp;return&nbsp;sprite<br>
+&nbsp;<br>
+Raises&nbsp;IndexOutOfBounds&nbsp;if&nbsp;the&nbsp;idx&nbsp;is&nbsp;not&nbsp;within&nbsp;range.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-get_sprites_at"><strong>get_sprites_at</strong></a>(self, pos)</dt><dd><tt>return&nbsp;a&nbsp;list&nbsp;with&nbsp;all&nbsp;sprites&nbsp;at&nbsp;that&nbsp;position<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-get_sprites_at">get_sprites_at</a>(pos):&nbsp;return&nbsp;colliding_sprites<br>
+&nbsp;<br>
+Bottom&nbsp;sprites&nbsp;are&nbsp;listed&nbsp;first;&nbsp;the&nbsp;top&nbsp;ones&nbsp;are&nbsp;listed&nbsp;last.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-get_sprites_from_layer"><strong>get_sprites_from_layer</strong></a>(self, layer)</dt><dd><tt>return&nbsp;all&nbsp;sprites&nbsp;from&nbsp;a&nbsp;layer&nbsp;ordered&nbsp;as&nbsp;they&nbsp;where&nbsp;added<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-get_sprites_from_layer">get_sprites_from_layer</a>(layer):&nbsp;return&nbsp;sprites<br>
+&nbsp;<br>
+Returns&nbsp;all&nbsp;sprites&nbsp;from&nbsp;a&nbsp;layer.&nbsp;The&nbsp;sprites&nbsp;are&nbsp;ordered&nbsp;in&nbsp;the<br>
+sequence&nbsp;that&nbsp;they&nbsp;where&nbsp;added.&nbsp;(The&nbsp;sprites&nbsp;are&nbsp;not&nbsp;removed&nbsp;from&nbsp;the<br>
+layer.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-get_top_layer"><strong>get_top_layer</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;top&nbsp;layer<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-get_top_layer">get_top_layer</a>():&nbsp;return&nbsp;layer</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-get_top_sprite"><strong>get_top_sprite</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;topmost&nbsp;sprite<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-get_top_sprite">get_top_sprite</a>():&nbsp;return&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a></tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-layers"><strong>layers</strong></a>(self)</dt><dd><tt>return&nbsp;a&nbsp;list&nbsp;of&nbsp;unique&nbsp;defined&nbsp;layers&nbsp;defined.<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-layers">layers</a>():&nbsp;return&nbsp;layers</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-move_to_back"><strong>move_to_back</strong></a>(self, sprite)</dt><dd><tt>move&nbsp;the&nbsp;sprite&nbsp;to&nbsp;the&nbsp;bottom&nbsp;layer<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-move_to_back">move_to_back</a>(sprite):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Moves&nbsp;the&nbsp;sprite&nbsp;to&nbsp;the&nbsp;bottom&nbsp;layer&nbsp;by&nbsp;moving&nbsp;it&nbsp;to&nbsp;a&nbsp;new&nbsp;layer&nbsp;below<br>
+the&nbsp;current&nbsp;bottom&nbsp;layer.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-move_to_front"><strong>move_to_front</strong></a>(self, sprite)</dt><dd><tt>bring&nbsp;the&nbsp;sprite&nbsp;to&nbsp;front&nbsp;layer<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-move_to_front">move_to_front</a>(sprite):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Brings&nbsp;the&nbsp;sprite&nbsp;to&nbsp;front&nbsp;by&nbsp;changing&nbsp;the&nbsp;sprite&nbsp;layer&nbsp;to&nbsp;the&nbsp;top-most<br>
+layer.&nbsp;The&nbsp;sprite&nbsp;is&nbsp;added&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;list&nbsp;of&nbsp;sprites&nbsp;in&nbsp;that<br>
+top-most&nbsp;layer.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-remove_internal"><strong>remove_internal</strong></a>(self, sprite)</dt><dd><tt>Do&nbsp;not&nbsp;use&nbsp;this&nbsp;method&nbsp;directly.<br>
+&nbsp;<br>
+The&nbsp;group&nbsp;uses&nbsp;it&nbsp;to&nbsp;add&nbsp;a&nbsp;sprite.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-remove_sprites_of_layer"><strong>remove_sprites_of_layer</strong></a>(self, layer_nr)</dt><dd><tt>remove&nbsp;all&nbsp;sprites&nbsp;from&nbsp;a&nbsp;layer&nbsp;and&nbsp;return&nbsp;them&nbsp;as&nbsp;a&nbsp;list<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-remove_sprites_of_layer">remove_sprites_of_layer</a>(layer_nr):&nbsp;return&nbsp;sprites</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-sprites"><strong>sprites</strong></a>(self)</dt><dd><tt>return&nbsp;a&nbsp;ordered&nbsp;list&nbsp;of&nbsp;sprites&nbsp;(first&nbsp;back,&nbsp;last&nbsp;top).<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-sprites">sprites</a>():&nbsp;return&nbsp;sprites</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-switch_layer"><strong>switch_layer</strong></a>(self, layer1_nr, layer2_nr)</dt><dd><tt>switch&nbsp;the&nbsp;sprites&nbsp;from&nbsp;layer1_nr&nbsp;to&nbsp;layer2_nr<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#EnemyFleet-switch_layer">switch_layer</a>(layer1_nr,&nbsp;layer2_nr):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;layers&nbsp;number&nbsp;must&nbsp;exist.&nbsp;This&nbsp;method&nbsp;does&nbsp;not&nbsp;check&nbsp;for&nbsp;the<br>
+existence&nbsp;of&nbsp;the&nbsp;given&nbsp;layers.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#AbstractGroup">pygame.sprite.AbstractGroup</a>:<br>
+<dl><dt><a name="EnemyFleet-__bool__"><strong>__bool__</strong></a> = <a href="#EnemyFleet-__nonzero__">__nonzero__</a>(self)</dt></dl>
+
+<dl><dt><a name="EnemyFleet-__contains__"><strong>__contains__</strong></a>(self, sprite)</dt></dl>
+
+<dl><dt><a name="EnemyFleet-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EnemyFleet-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>return&nbsp;number&nbsp;of&nbsp;sprites&nbsp;in&nbsp;group<br>
+&nbsp;<br>
+Group.len(group):&nbsp;return&nbsp;int<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;sprites&nbsp;contained&nbsp;in&nbsp;the&nbsp;group.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-__nonzero__"><strong>__nonzero__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="EnemyFleet-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-clear"><strong>clear</strong></a>(self, surface, bgd)</dt><dd><tt>erase&nbsp;the&nbsp;previous&nbsp;position&nbsp;of&nbsp;all&nbsp;sprites<br>
+&nbsp;<br>
+Group.<a href="#EnemyFleet-clear">clear</a>(surface,&nbsp;bgd):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Clears&nbsp;the&nbsp;area&nbsp;under&nbsp;every&nbsp;drawn&nbsp;sprite&nbsp;in&nbsp;the&nbsp;group.&nbsp;The&nbsp;bgd<br>
+argument&nbsp;should&nbsp;be&nbsp;Surface&nbsp;which&nbsp;is&nbsp;the&nbsp;same&nbsp;dimensions&nbsp;as&nbsp;the<br>
+screen&nbsp;surface.&nbsp;The&nbsp;bgd&nbsp;could&nbsp;also&nbsp;be&nbsp;a&nbsp;function&nbsp;which&nbsp;accepts<br>
+the&nbsp;given&nbsp;surface&nbsp;and&nbsp;the&nbsp;area&nbsp;to&nbsp;be&nbsp;cleared&nbsp;as&nbsp;arguments.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-copy"><strong>copy</strong></a>(self)</dt><dd><tt>copy&nbsp;a&nbsp;group&nbsp;with&nbsp;all&nbsp;the&nbsp;same&nbsp;sprites<br>
+&nbsp;<br>
+Group.<a href="#EnemyFleet-copy">copy</a>():&nbsp;return&nbsp;Group<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;group&nbsp;that&nbsp;is&nbsp;an&nbsp;instance&nbsp;of&nbsp;the&nbsp;same&nbsp;class<br>
+and&nbsp;has&nbsp;the&nbsp;same&nbsp;sprites&nbsp;in&nbsp;it.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-empty"><strong>empty</strong></a>(self)</dt><dd><tt>remove&nbsp;all&nbsp;sprites<br>
+&nbsp;<br>
+Group.<a href="#EnemyFleet-empty">empty</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Removes&nbsp;all&nbsp;the&nbsp;sprites&nbsp;from&nbsp;the&nbsp;group.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-has"><strong>has</strong></a>(self, *sprites)</dt><dd><tt>ask&nbsp;if&nbsp;group&nbsp;has&nbsp;a&nbsp;sprite&nbsp;or&nbsp;sprites<br>
+&nbsp;<br>
+Group.<a href="#EnemyFleet-has">has</a>(sprite&nbsp;or&nbsp;group,&nbsp;...):&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;if&nbsp;the&nbsp;given&nbsp;sprite&nbsp;or&nbsp;sprites&nbsp;are&nbsp;contained&nbsp;in&nbsp;the<br>
+group.&nbsp;Alternatively,&nbsp;you&nbsp;can&nbsp;get&nbsp;the&nbsp;same&nbsp;information&nbsp;using&nbsp;the<br>
+'in'&nbsp;operator,&nbsp;e.g.&nbsp;'sprite&nbsp;in&nbsp;group',&nbsp;'subgroup&nbsp;in&nbsp;group'.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-has_internal"><strong>has_internal</strong></a>(self, sprite)</dt><dd><tt>For&nbsp;checking&nbsp;if&nbsp;a&nbsp;sprite&nbsp;is&nbsp;in&nbsp;this&nbsp;group&nbsp;internally.<br>
+&nbsp;<br>
+:param&nbsp;sprite:&nbsp;The&nbsp;sprite&nbsp;we&nbsp;are&nbsp;checking.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-remove"><strong>remove</strong></a>(self, *sprites)</dt><dd><tt>remove&nbsp;sprite(s)&nbsp;from&nbsp;group<br>
+&nbsp;<br>
+Group.<a href="#EnemyFleet-remove">remove</a>(sprite,&nbsp;list,&nbsp;or&nbsp;group,&nbsp;...):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Removes&nbsp;a&nbsp;sprite&nbsp;or&nbsp;sequence&nbsp;of&nbsp;sprites&nbsp;from&nbsp;a&nbsp;group.</tt></dd></dl>
+
+<dl><dt><a name="EnemyFleet-update"><strong>update</strong></a>(self, *args, **kwargs)</dt><dd><tt>call&nbsp;the&nbsp;update&nbsp;method&nbsp;of&nbsp;every&nbsp;member&nbsp;sprite<br>
+&nbsp;<br>
+Group.<a href="#EnemyFleet-update">update</a>(*args,&nbsp;**kwargs):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Calls&nbsp;the&nbsp;update&nbsp;method&nbsp;of&nbsp;every&nbsp;member&nbsp;sprite.&nbsp;All&nbsp;arguments&nbsp;that<br>
+were&nbsp;passed&nbsp;to&nbsp;this&nbsp;method&nbsp;are&nbsp;passed&nbsp;to&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;update&nbsp;function.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Fleet">class <strong>Fleet</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Fleet">Fleet</a>(targetGrid,&nbsp;player)<br>
+&nbsp;<br>
+base&nbsp;class&nbsp;of&nbsp;fleets<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Fleet-__init__"><strong>__init__</strong></a>(self, targetGrid, player)</dt><dd><tt>:param:&nbsp;targetGird:&nbsp;TileGrid&nbsp;of&nbsp;fleet&nbsp;is&nbsp;going&nbsp;to&nbsp;be&nbsp;located&nbsp;on<br>
+:param:&nbsp;player:&nbsp;String&nbsp;of&nbsp;either&nbsp;'Player'&nbsp;or&nbsp;'Enemy'&nbsp;indicate&nbsp;side</tt></dd></dl>
+
+<dl><dt><a name="Fleet-allSink"><strong>allSink</strong></a>(self)</dt><dd><tt>Check&nbsp;if&nbsp;all&nbsp;ship&nbsp;have&nbsp;sunk</tt></dd></dl>
+
+<dl><dt><a name="Fleet-createShipsJSON"><strong>createShipsJSON</strong></a>(self)</dt><dd><tt>Write&nbsp;current&nbsp;ship&nbsp;position&nbsp;into&nbsp;JSON&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="Fleet-processShipsJSON"><strong>processShipsJSON</strong></a>(self, ships_info)</dt><dd><tt>Process&nbsp;ship&nbsp;info&nbsp;read&nbsp;from&nbsp;ships.json&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="Fleet-readShipsJSON"><strong>readShipsJSON</strong></a>(self)</dt><dd><tt>Read&nbsp;and&nbsp;process&nbsp;ship&nbsp;info&nbsp;from&nbsp;ships.json&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="Fleet-validateShip"><strong>validateShip</strong></a>(self)</dt><dd><tt>Validate&nbsp;ship&nbsp;position</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PlayerFleet">class <strong>PlayerFleet</strong></a>(<a href="ship.html#Fleet">Fleet</a>, <a href="pygame.sprite.html#LayeredUpdates">pygame.sprite.LayeredUpdates</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#PlayerFleet">PlayerFleet</a>(targetGrid)<br>
+&nbsp;<br>
+fleet&nbsp;control&nbsp;by&nbsp;player<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ship.html#PlayerFleet">PlayerFleet</a></dd>
+<dd><a href="ship.html#Fleet">Fleet</a></dd>
+<dd><a href="pygame.sprite.html#LayeredUpdates">pygame.sprite.LayeredUpdates</a></dd>
+<dd><a href="pygame.sprite.html#AbstractGroup">pygame.sprite.AbstractGroup</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PlayerFleet-__init__"><strong>__init__</strong></a>(self, targetGrid)</dt><dd><tt>:param&nbsp;targetGrid:&nbsp;TileGrid&nbsp;of&nbsp;fleet&nbsp;is&nbsp;going&nbsp;to&nbsp;be&nbsp;located&nbsp;on</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-grab"><strong>grab</strong></a>(self, x, y)</dt><dd><tt>select&nbsp;ship&nbsp;at&nbsp;the&nbsp;location.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>move&nbsp;selected&nbsp;ship&nbsp;to&nbsp;one&nbsp;position</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-release"><strong>release</strong></a>(self)</dt><dd><tt>release&nbsp;selected&nbsp;ship.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-shipsPlaced"><strong>shipsPlaced</strong></a>(self)</dt><dd><tt>Check&nbsp;if&nbsp;all&nbsp;ship&nbsp;in&nbsp;the&nbsp;fleet&nbsp;are&nbsp;placed&nbsp;in&nbsp;the&nbsp;grid.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ship.html#Fleet">Fleet</a>:<br>
+<dl><dt><a name="PlayerFleet-allSink"><strong>allSink</strong></a>(self)</dt><dd><tt>Check&nbsp;if&nbsp;all&nbsp;ship&nbsp;have&nbsp;sunk</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-createShipsJSON"><strong>createShipsJSON</strong></a>(self)</dt><dd><tt>Write&nbsp;current&nbsp;ship&nbsp;position&nbsp;into&nbsp;JSON&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-processShipsJSON"><strong>processShipsJSON</strong></a>(self, ships_info)</dt><dd><tt>Process&nbsp;ship&nbsp;info&nbsp;read&nbsp;from&nbsp;ships.json&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-readShipsJSON"><strong>readShipsJSON</strong></a>(self)</dt><dd><tt>Read&nbsp;and&nbsp;process&nbsp;ship&nbsp;info&nbsp;from&nbsp;ships.json&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-validateShip"><strong>validateShip</strong></a>(self)</dt><dd><tt>Validate&nbsp;ship&nbsp;position</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="ship.html#Fleet">Fleet</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="pygame.sprite.html#LayeredUpdates">pygame.sprite.LayeredUpdates</a>:<br>
+<dl><dt><a name="PlayerFleet-add"><strong>add</strong></a>(self, *sprites, **kwargs)</dt><dd><tt>add&nbsp;a&nbsp;sprite&nbsp;or&nbsp;sequence&nbsp;of&nbsp;sprites&nbsp;to&nbsp;a&nbsp;group<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-add">add</a>(*sprites,&nbsp;**kwargs):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;sprite&nbsp;you&nbsp;add&nbsp;has&nbsp;an&nbsp;attribute&nbsp;_layer,&nbsp;then&nbsp;that&nbsp;layer&nbsp;will&nbsp;be<br>
+used.&nbsp;If&nbsp;**kwarg&nbsp;contains&nbsp;'layer',&nbsp;then&nbsp;the&nbsp;passed&nbsp;sprites&nbsp;will&nbsp;be<br>
+added&nbsp;to&nbsp;that&nbsp;layer&nbsp;(overriding&nbsp;the&nbsp;sprite._layer&nbsp;attribute).&nbsp;If<br>
+neither&nbsp;the&nbsp;sprite&nbsp;nor&nbsp;**kwarg&nbsp;has&nbsp;a&nbsp;'layer',&nbsp;then&nbsp;the&nbsp;default&nbsp;layer&nbsp;is<br>
+used&nbsp;to&nbsp;add&nbsp;the&nbsp;sprites.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-add_internal"><strong>add_internal</strong></a>(self, sprite, layer=None)</dt><dd><tt>Do&nbsp;not&nbsp;use&nbsp;this&nbsp;method&nbsp;directly.<br>
+&nbsp;<br>
+It&nbsp;is&nbsp;used&nbsp;by&nbsp;the&nbsp;group&nbsp;to&nbsp;add&nbsp;a&nbsp;sprite&nbsp;internally.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-change_layer"><strong>change_layer</strong></a>(self, sprite, new_layer)</dt><dd><tt>change&nbsp;the&nbsp;layer&nbsp;of&nbsp;the&nbsp;sprite<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-change_layer">change_layer</a>(sprite,&nbsp;new_layer):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;sprite&nbsp;must&nbsp;have&nbsp;been&nbsp;added&nbsp;to&nbsp;the&nbsp;renderer&nbsp;already.&nbsp;This&nbsp;is&nbsp;not<br>
+checked.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-draw"><strong>draw</strong></a>(self, surface)</dt><dd><tt>draw&nbsp;all&nbsp;sprites&nbsp;in&nbsp;the&nbsp;right&nbsp;order&nbsp;onto&nbsp;the&nbsp;passed&nbsp;surface<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-draw">draw</a>(surface):&nbsp;return&nbsp;Rect_list</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-get_bottom_layer"><strong>get_bottom_layer</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;bottom&nbsp;layer<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-get_bottom_layer">get_bottom_layer</a>():&nbsp;return&nbsp;layer</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-get_layer_of_sprite"><strong>get_layer_of_sprite</strong></a>(self, sprite)</dt><dd><tt>return&nbsp;the&nbsp;layer&nbsp;that&nbsp;sprite&nbsp;is&nbsp;currently&nbsp;in<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;sprite&nbsp;is&nbsp;not&nbsp;found,&nbsp;then&nbsp;it&nbsp;will&nbsp;return&nbsp;the&nbsp;default&nbsp;layer.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-get_sprite"><strong>get_sprite</strong></a>(self, idx)</dt><dd><tt>return&nbsp;the&nbsp;sprite&nbsp;at&nbsp;the&nbsp;index&nbsp;idx&nbsp;from&nbsp;the&nbsp;groups&nbsp;sprites<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-get_sprite">get_sprite</a>(idx):&nbsp;return&nbsp;sprite<br>
+&nbsp;<br>
+Raises&nbsp;IndexOutOfBounds&nbsp;if&nbsp;the&nbsp;idx&nbsp;is&nbsp;not&nbsp;within&nbsp;range.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-get_sprites_at"><strong>get_sprites_at</strong></a>(self, pos)</dt><dd><tt>return&nbsp;a&nbsp;list&nbsp;with&nbsp;all&nbsp;sprites&nbsp;at&nbsp;that&nbsp;position<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-get_sprites_at">get_sprites_at</a>(pos):&nbsp;return&nbsp;colliding_sprites<br>
+&nbsp;<br>
+Bottom&nbsp;sprites&nbsp;are&nbsp;listed&nbsp;first;&nbsp;the&nbsp;top&nbsp;ones&nbsp;are&nbsp;listed&nbsp;last.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-get_sprites_from_layer"><strong>get_sprites_from_layer</strong></a>(self, layer)</dt><dd><tt>return&nbsp;all&nbsp;sprites&nbsp;from&nbsp;a&nbsp;layer&nbsp;ordered&nbsp;as&nbsp;they&nbsp;where&nbsp;added<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-get_sprites_from_layer">get_sprites_from_layer</a>(layer):&nbsp;return&nbsp;sprites<br>
+&nbsp;<br>
+Returns&nbsp;all&nbsp;sprites&nbsp;from&nbsp;a&nbsp;layer.&nbsp;The&nbsp;sprites&nbsp;are&nbsp;ordered&nbsp;in&nbsp;the<br>
+sequence&nbsp;that&nbsp;they&nbsp;where&nbsp;added.&nbsp;(The&nbsp;sprites&nbsp;are&nbsp;not&nbsp;removed&nbsp;from&nbsp;the<br>
+layer.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-get_top_layer"><strong>get_top_layer</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;top&nbsp;layer<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-get_top_layer">get_top_layer</a>():&nbsp;return&nbsp;layer</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-get_top_sprite"><strong>get_top_sprite</strong></a>(self)</dt><dd><tt>return&nbsp;the&nbsp;topmost&nbsp;sprite<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-get_top_sprite">get_top_sprite</a>():&nbsp;return&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a></tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-layers"><strong>layers</strong></a>(self)</dt><dd><tt>return&nbsp;a&nbsp;list&nbsp;of&nbsp;unique&nbsp;defined&nbsp;layers&nbsp;defined.<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-layers">layers</a>():&nbsp;return&nbsp;layers</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-move_to_back"><strong>move_to_back</strong></a>(self, sprite)</dt><dd><tt>move&nbsp;the&nbsp;sprite&nbsp;to&nbsp;the&nbsp;bottom&nbsp;layer<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-move_to_back">move_to_back</a>(sprite):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Moves&nbsp;the&nbsp;sprite&nbsp;to&nbsp;the&nbsp;bottom&nbsp;layer&nbsp;by&nbsp;moving&nbsp;it&nbsp;to&nbsp;a&nbsp;new&nbsp;layer&nbsp;below<br>
+the&nbsp;current&nbsp;bottom&nbsp;layer.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-move_to_front"><strong>move_to_front</strong></a>(self, sprite)</dt><dd><tt>bring&nbsp;the&nbsp;sprite&nbsp;to&nbsp;front&nbsp;layer<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-move_to_front">move_to_front</a>(sprite):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Brings&nbsp;the&nbsp;sprite&nbsp;to&nbsp;front&nbsp;by&nbsp;changing&nbsp;the&nbsp;sprite&nbsp;layer&nbsp;to&nbsp;the&nbsp;top-most<br>
+layer.&nbsp;The&nbsp;sprite&nbsp;is&nbsp;added&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;list&nbsp;of&nbsp;sprites&nbsp;in&nbsp;that<br>
+top-most&nbsp;layer.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-remove_internal"><strong>remove_internal</strong></a>(self, sprite)</dt><dd><tt>Do&nbsp;not&nbsp;use&nbsp;this&nbsp;method&nbsp;directly.<br>
+&nbsp;<br>
+The&nbsp;group&nbsp;uses&nbsp;it&nbsp;to&nbsp;add&nbsp;a&nbsp;sprite.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-remove_sprites_of_layer"><strong>remove_sprites_of_layer</strong></a>(self, layer_nr)</dt><dd><tt>remove&nbsp;all&nbsp;sprites&nbsp;from&nbsp;a&nbsp;layer&nbsp;and&nbsp;return&nbsp;them&nbsp;as&nbsp;a&nbsp;list<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-remove_sprites_of_layer">remove_sprites_of_layer</a>(layer_nr):&nbsp;return&nbsp;sprites</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-sprites"><strong>sprites</strong></a>(self)</dt><dd><tt>return&nbsp;a&nbsp;ordered&nbsp;list&nbsp;of&nbsp;sprites&nbsp;(first&nbsp;back,&nbsp;last&nbsp;top).<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-sprites">sprites</a>():&nbsp;return&nbsp;sprites</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-switch_layer"><strong>switch_layer</strong></a>(self, layer1_nr, layer2_nr)</dt><dd><tt>switch&nbsp;the&nbsp;sprites&nbsp;from&nbsp;layer1_nr&nbsp;to&nbsp;layer2_nr<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#LayeredUpdates">LayeredUpdates</a>.<a href="#PlayerFleet-switch_layer">switch_layer</a>(layer1_nr,&nbsp;layer2_nr):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;layers&nbsp;number&nbsp;must&nbsp;exist.&nbsp;This&nbsp;method&nbsp;does&nbsp;not&nbsp;check&nbsp;for&nbsp;the<br>
+existence&nbsp;of&nbsp;the&nbsp;given&nbsp;layers.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#AbstractGroup">pygame.sprite.AbstractGroup</a>:<br>
+<dl><dt><a name="PlayerFleet-__bool__"><strong>__bool__</strong></a> = <a href="#PlayerFleet-__nonzero__">__nonzero__</a>(self)</dt></dl>
+
+<dl><dt><a name="PlayerFleet-__contains__"><strong>__contains__</strong></a>(self, sprite)</dt></dl>
+
+<dl><dt><a name="PlayerFleet-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PlayerFleet-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>return&nbsp;number&nbsp;of&nbsp;sprites&nbsp;in&nbsp;group<br>
+&nbsp;<br>
+Group.len(group):&nbsp;return&nbsp;int<br>
+&nbsp;<br>
+Returns&nbsp;the&nbsp;number&nbsp;of&nbsp;sprites&nbsp;contained&nbsp;in&nbsp;the&nbsp;group.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-__nonzero__"><strong>__nonzero__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PlayerFleet-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-clear"><strong>clear</strong></a>(self, surface, bgd)</dt><dd><tt>erase&nbsp;the&nbsp;previous&nbsp;position&nbsp;of&nbsp;all&nbsp;sprites<br>
+&nbsp;<br>
+Group.<a href="#PlayerFleet-clear">clear</a>(surface,&nbsp;bgd):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Clears&nbsp;the&nbsp;area&nbsp;under&nbsp;every&nbsp;drawn&nbsp;sprite&nbsp;in&nbsp;the&nbsp;group.&nbsp;The&nbsp;bgd<br>
+argument&nbsp;should&nbsp;be&nbsp;Surface&nbsp;which&nbsp;is&nbsp;the&nbsp;same&nbsp;dimensions&nbsp;as&nbsp;the<br>
+screen&nbsp;surface.&nbsp;The&nbsp;bgd&nbsp;could&nbsp;also&nbsp;be&nbsp;a&nbsp;function&nbsp;which&nbsp;accepts<br>
+the&nbsp;given&nbsp;surface&nbsp;and&nbsp;the&nbsp;area&nbsp;to&nbsp;be&nbsp;cleared&nbsp;as&nbsp;arguments.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-copy"><strong>copy</strong></a>(self)</dt><dd><tt>copy&nbsp;a&nbsp;group&nbsp;with&nbsp;all&nbsp;the&nbsp;same&nbsp;sprites<br>
+&nbsp;<br>
+Group.<a href="#PlayerFleet-copy">copy</a>():&nbsp;return&nbsp;Group<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;group&nbsp;that&nbsp;is&nbsp;an&nbsp;instance&nbsp;of&nbsp;the&nbsp;same&nbsp;class<br>
+and&nbsp;has&nbsp;the&nbsp;same&nbsp;sprites&nbsp;in&nbsp;it.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-empty"><strong>empty</strong></a>(self)</dt><dd><tt>remove&nbsp;all&nbsp;sprites<br>
+&nbsp;<br>
+Group.<a href="#PlayerFleet-empty">empty</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Removes&nbsp;all&nbsp;the&nbsp;sprites&nbsp;from&nbsp;the&nbsp;group.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-has"><strong>has</strong></a>(self, *sprites)</dt><dd><tt>ask&nbsp;if&nbsp;group&nbsp;has&nbsp;a&nbsp;sprite&nbsp;or&nbsp;sprites<br>
+&nbsp;<br>
+Group.<a href="#PlayerFleet-has">has</a>(sprite&nbsp;or&nbsp;group,&nbsp;...):&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;if&nbsp;the&nbsp;given&nbsp;sprite&nbsp;or&nbsp;sprites&nbsp;are&nbsp;contained&nbsp;in&nbsp;the<br>
+group.&nbsp;Alternatively,&nbsp;you&nbsp;can&nbsp;get&nbsp;the&nbsp;same&nbsp;information&nbsp;using&nbsp;the<br>
+'in'&nbsp;operator,&nbsp;e.g.&nbsp;'sprite&nbsp;in&nbsp;group',&nbsp;'subgroup&nbsp;in&nbsp;group'.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-has_internal"><strong>has_internal</strong></a>(self, sprite)</dt><dd><tt>For&nbsp;checking&nbsp;if&nbsp;a&nbsp;sprite&nbsp;is&nbsp;in&nbsp;this&nbsp;group&nbsp;internally.<br>
+&nbsp;<br>
+:param&nbsp;sprite:&nbsp;The&nbsp;sprite&nbsp;we&nbsp;are&nbsp;checking.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-remove"><strong>remove</strong></a>(self, *sprites)</dt><dd><tt>remove&nbsp;sprite(s)&nbsp;from&nbsp;group<br>
+&nbsp;<br>
+Group.<a href="#PlayerFleet-remove">remove</a>(sprite,&nbsp;list,&nbsp;or&nbsp;group,&nbsp;...):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Removes&nbsp;a&nbsp;sprite&nbsp;or&nbsp;sequence&nbsp;of&nbsp;sprites&nbsp;from&nbsp;a&nbsp;group.</tt></dd></dl>
+
+<dl><dt><a name="PlayerFleet-update"><strong>update</strong></a>(self, *args, **kwargs)</dt><dd><tt>call&nbsp;the&nbsp;update&nbsp;method&nbsp;of&nbsp;every&nbsp;member&nbsp;sprite<br>
+&nbsp;<br>
+Group.<a href="#PlayerFleet-update">update</a>(*args,&nbsp;**kwargs):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Calls&nbsp;the&nbsp;update&nbsp;method&nbsp;of&nbsp;every&nbsp;member&nbsp;sprite.&nbsp;All&nbsp;arguments&nbsp;that<br>
+were&nbsp;passed&nbsp;to&nbsp;this&nbsp;method&nbsp;are&nbsp;passed&nbsp;to&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;update&nbsp;function.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PlayerShip">class <strong>PlayerShip</strong></a>(<a href="ship.html#Ship">Ship</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#PlayerShip">PlayerShip</a>(shipType,&nbsp;row,&nbsp;col,&nbsp;targetGrid)<br>
+&nbsp;<br>
+<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ship.html#PlayerShip">PlayerShip</a></dd>
+<dd><a href="ship.html#Ship">Ship</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PlayerShip-__init__"><strong>__init__</strong></a>(self, shipType, row, col, targetGrid)</dt><dd><tt>:param&nbsp;targetGrid&nbsp;(TileGrid)&nbsp;:&nbsp;tile&nbsp;grid&nbsp;of&nbsp;the&nbsp;ship&nbsp;is&nbsp;located&nbsp;on.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-drop"><strong>drop</strong></a>(self, x, y)</dt><dd><tt>release</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-grab"><strong>grab</strong></a>(self, x, y)</dt><dd><tt>picked&nbsp;up</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-move"><strong>move</strong></a>(self, dx, dy)</dt><dd><tt>move&nbsp;by&nbsp;a&nbsp;distance</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-reset"><strong>reset</strong></a>(self)</dt><dd><tt>put&nbsp;back&nbsp;to&nbsp;original&nbsp;position</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-rotate"><strong>rotate</strong></a>(self)</dt><dd><tt>#&nbsp;INCOMPLETE</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-update"><strong>update</strong></a>(self, grid, orient)</dt><dd><tt>change&nbsp;the&nbsp;grid&nbsp;and&nbsp;orientation</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="ship.html#Ship">Ship</a>:<br>
+<dl><dt><a name="PlayerShip-collide"><strong>collide</strong></a>(self, grid)</dt><dd><tt>check&nbsp;if&nbsp;the&nbsp;ship&nbsp;is&nbsp;on&nbsp;the&nbsp;grid.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-getPosList"><strong>getPosList</strong></a>(self)</dt><dd><tt>get&nbsp;the&nbsp;positions&nbsp;of&nbsp;the&nbsp;tile&nbsp;the&nbsp;ship&nbsp;is&nbsp;on.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-hit"><strong>hit</strong></a>(self)</dt><dd><tt>decrease&nbsp;hp&nbsp;if&nbsp;being&nbsp;hit.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-sink"><strong>sink</strong></a>(self)</dt><dd><tt>check&nbsp;if&nbsp;the&nbsp;ship&nbsp;is&nbsp;sunk&nbsp;(hp==0).</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="ship.html#Ship">Ship</a>:<br>
+<dl><dt><strong>BATTLESHIP</strong> = 4</dl>
+
+<dl><dt><strong>CARRIER</strong> = 5</dl>
+
+<dl><dt><strong>CRUISER</strong> = 3</dl>
+
+<dl><dt><strong>DESTROYER</strong> = 2</dl>
+
+<dl><dt><strong>HORIZONTAL</strong> = False</dl>
+
+<dl><dt><strong>SUBMARINE</strong> = 3.5</dl>
+
+<dl><dt><strong>VERTICAL</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="PlayerShip-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#PlayerShip-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-add_internal"><strong>add_internal</strong></a>(self, group)</dt><dd><tt>For&nbsp;adding&nbsp;this&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;internally.<br>
+&nbsp;<br>
+:param&nbsp;group:&nbsp;The&nbsp;group&nbsp;we&nbsp;are&nbsp;adding&nbsp;to.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#PlayerShip-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a><br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#PlayerShip-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#PlayerShip-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to<br>
+continue&nbsp;to&nbsp;use&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including<br>
+adding&nbsp;it&nbsp;to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#PlayerShip-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a><br>
+will&nbsp;be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="PlayerShip-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt><dd><tt>For&nbsp;removing&nbsp;this&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;internally.<br>
+&nbsp;<br>
+:param&nbsp;group:&nbsp;The&nbsp;group&nbsp;we&nbsp;are&nbsp;removing&nbsp;from.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>layer</strong></dt>
+<dd><tt>Dynamic,&nbsp;read&nbsp;only&nbsp;property&nbsp;for&nbsp;protected&nbsp;_layer&nbsp;attribute.<br>
+This&nbsp;will&nbsp;get&nbsp;the&nbsp;_layer&nbsp;variable&nbsp;if&nbsp;it&nbsp;exists.<br>
+&nbsp;<br>
+If&nbsp;you&nbsp;try&nbsp;to&nbsp;get&nbsp;it&nbsp;before&nbsp;it&nbsp;is&nbsp;set&nbsp;it&nbsp;will&nbsp;raise&nbsp;an&nbsp;attribute&nbsp;error.<br>
+&nbsp;<br>
+Layer&nbsp;property&nbsp;can&nbsp;only&nbsp;be&nbsp;set&nbsp;before&nbsp;the&nbsp;sprite&nbsp;is&nbsp;added&nbsp;to&nbsp;a&nbsp;group,<br>
+after&nbsp;that&nbsp;it&nbsp;is&nbsp;read&nbsp;only&nbsp;and&nbsp;a&nbsp;sprite's&nbsp;layer&nbsp;in&nbsp;a&nbsp;group&nbsp;should&nbsp;be<br>
+set&nbsp;via&nbsp;the&nbsp;group's&nbsp;change_layer()&nbsp;method.<br>
+&nbsp;<br>
+:return:&nbsp;layer&nbsp;as&nbsp;an&nbsp;int,&nbsp;or&nbsp;raise&nbsp;AttributeError.</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Ship">class <strong>Ship</strong></a>(<a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Ship">Ship</a>(shipType,&nbsp;row,&nbsp;col,&nbsp;targetGrid)<br>
+&nbsp;<br>
+base&nbsp;class&nbsp;for&nbsp;all&nbsp;the&nbsp;ships<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="ship.html#Ship">Ship</a></dd>
+<dd><a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Ship-__init__"><strong>__init__</strong></a>(self, shipType, row, col, targetGrid)</dt><dd><tt>:param&nbsp;targetGrid&nbsp;(TileGrid)&nbsp;:&nbsp;tile&nbsp;grid&nbsp;of&nbsp;the&nbsp;ship&nbsp;is&nbsp;located&nbsp;on.</tt></dd></dl>
+
+<dl><dt><a name="Ship-collide"><strong>collide</strong></a>(self, grid)</dt><dd><tt>check&nbsp;if&nbsp;the&nbsp;ship&nbsp;is&nbsp;on&nbsp;the&nbsp;grid.</tt></dd></dl>
+
+<dl><dt><a name="Ship-getPosList"><strong>getPosList</strong></a>(self)</dt><dd><tt>get&nbsp;the&nbsp;positions&nbsp;of&nbsp;the&nbsp;tile&nbsp;the&nbsp;ship&nbsp;is&nbsp;on.</tt></dd></dl>
+
+<dl><dt><a name="Ship-hit"><strong>hit</strong></a>(self)</dt><dd><tt>decrease&nbsp;hp&nbsp;if&nbsp;being&nbsp;hit.</tt></dd></dl>
+
+<dl><dt><a name="Ship-sink"><strong>sink</strong></a>(self)</dt><dd><tt>check&nbsp;if&nbsp;the&nbsp;ship&nbsp;is&nbsp;sunk&nbsp;(hp==0).</tt></dd></dl>
+
+<dl><dt><a name="Ship-update"><strong>update</strong></a>(self, grid, orient)</dt><dd><tt>change&nbsp;the&nbsp;grid&nbsp;and&nbsp;orientation</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>BATTLESHIP</strong> = 4</dl>
+
+<dl><dt><strong>CARRIER</strong> = 5</dl>
+
+<dl><dt><strong>CRUISER</strong> = 3</dl>
+
+<dl><dt><strong>DESTROYER</strong> = 2</dl>
+
+<dl><dt><strong>HORIZONTAL</strong> = False</dl>
+
+<dl><dt><strong>SUBMARINE</strong> = 3.5</dl>
+
+<dl><dt><strong>VERTICAL</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><a name="Ship-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="Ship-add"><strong>add</strong></a>(self, *groups)</dt><dd><tt>add&nbsp;the&nbsp;sprite&nbsp;to&nbsp;groups<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#Ship-add">add</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;will&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;not&nbsp;already&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Ship-add_internal"><strong>add_internal</strong></a>(self, group)</dt><dd><tt>For&nbsp;adding&nbsp;this&nbsp;sprite&nbsp;to&nbsp;a&nbsp;group&nbsp;internally.<br>
+&nbsp;<br>
+:param&nbsp;group:&nbsp;The&nbsp;group&nbsp;we&nbsp;are&nbsp;adding&nbsp;to.</tt></dd></dl>
+
+<dl><dt><a name="Ship-alive"><strong>alive</strong></a>(self)</dt><dd><tt>does&nbsp;the&nbsp;sprite&nbsp;belong&nbsp;to&nbsp;any&nbsp;groups<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#Ship-alive">alive</a>():&nbsp;return&nbsp;bool<br>
+&nbsp;<br>
+Returns&nbsp;True&nbsp;when&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;belongs&nbsp;to&nbsp;one&nbsp;or&nbsp;more&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Ship-groups"><strong>groups</strong></a>(self)</dt><dd><tt>list&nbsp;of&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a><br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#Ship-groups">groups</a>():&nbsp;return&nbsp;group_list<br>
+&nbsp;<br>
+Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;this&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>.</tt></dd></dl>
+
+<dl><dt><a name="Ship-kill"><strong>kill</strong></a>(self)</dt><dd><tt>remove&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;from&nbsp;all&nbsp;Groups<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#Ship-kill">kill</a>():&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;is&nbsp;removed&nbsp;from&nbsp;all&nbsp;the&nbsp;Groups&nbsp;that&nbsp;contain&nbsp;it.&nbsp;This&nbsp;won't<br>
+change&nbsp;anything&nbsp;about&nbsp;the&nbsp;state&nbsp;of&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to<br>
+continue&nbsp;to&nbsp;use&nbsp;the&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a>&nbsp;after&nbsp;this&nbsp;method&nbsp;has&nbsp;been&nbsp;called,&nbsp;including<br>
+adding&nbsp;it&nbsp;to&nbsp;Groups.</tt></dd></dl>
+
+<dl><dt><a name="Ship-remove"><strong>remove</strong></a>(self, *groups)</dt><dd><tt>remove&nbsp;the&nbsp;sprite&nbsp;from&nbsp;groups<br>
+&nbsp;<br>
+<a href="pygame.sprite.html#Sprite">Sprite</a>.<a href="#Ship-remove">remove</a>(*groups):&nbsp;return&nbsp;None<br>
+&nbsp;<br>
+Any&nbsp;number&nbsp;of&nbsp;Group&nbsp;instances&nbsp;can&nbsp;be&nbsp;passed&nbsp;as&nbsp;arguments.&nbsp;The&nbsp;<a href="pygame.sprite.html#Sprite">Sprite</a><br>
+will&nbsp;be&nbsp;removed&nbsp;from&nbsp;the&nbsp;Groups&nbsp;it&nbsp;is&nbsp;currently&nbsp;a&nbsp;member&nbsp;of.</tt></dd></dl>
+
+<dl><dt><a name="Ship-remove_internal"><strong>remove_internal</strong></a>(self, group)</dt><dd><tt>For&nbsp;removing&nbsp;this&nbsp;sprite&nbsp;from&nbsp;a&nbsp;group&nbsp;internally.<br>
+&nbsp;<br>
+:param&nbsp;group:&nbsp;The&nbsp;group&nbsp;we&nbsp;are&nbsp;removing&nbsp;from.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pygame.sprite.html#Sprite">pygame.sprite.Sprite</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>layer</strong></dt>
+<dd><tt>Dynamic,&nbsp;read&nbsp;only&nbsp;property&nbsp;for&nbsp;protected&nbsp;_layer&nbsp;attribute.<br>
+This&nbsp;will&nbsp;get&nbsp;the&nbsp;_layer&nbsp;variable&nbsp;if&nbsp;it&nbsp;exists.<br>
+&nbsp;<br>
+If&nbsp;you&nbsp;try&nbsp;to&nbsp;get&nbsp;it&nbsp;before&nbsp;it&nbsp;is&nbsp;set&nbsp;it&nbsp;will&nbsp;raise&nbsp;an&nbsp;attribute&nbsp;error.<br>
+&nbsp;<br>
+Layer&nbsp;property&nbsp;can&nbsp;only&nbsp;be&nbsp;set&nbsp;before&nbsp;the&nbsp;sprite&nbsp;is&nbsp;added&nbsp;to&nbsp;a&nbsp;group,<br>
+after&nbsp;that&nbsp;it&nbsp;is&nbsp;read&nbsp;only&nbsp;and&nbsp;a&nbsp;sprite's&nbsp;layer&nbsp;in&nbsp;a&nbsp;group&nbsp;should&nbsp;be<br>
+set&nbsp;via&nbsp;the&nbsp;group's&nbsp;change_layer()&nbsp;method.<br>
+&nbsp;<br>
+:return:&nbsp;layer&nbsp;as&nbsp;an&nbsp;int,&nbsp;or&nbsp;raise&nbsp;AttributeError.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

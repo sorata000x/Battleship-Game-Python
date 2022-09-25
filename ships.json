@@ -1,0 +1,38 @@
+{
+  "Player": {
+    "Carrier": [[8, 1], false],
+    "Battleship": [[3, 4], false],
+    "Cruiser": [[2, 2], true],
+    "Submarine": [[0, 7], false],
+    "Destroyer": [[5 ,4], true]
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "Enemy": {
+    "Carrier": [[0, 0], true],
+    "Battleship": [[6, 2], false],
+    "Cruiser": [[3, 5], false],
+    "Submarine": [[1, 2], false],
+    "Destroyer": [[6 ,8], true]
+  }
+}
