@@ -1,6 +1,6 @@
 ## Battleship Game
 
-Author: Sora Chen <br>
+Author: Aiden Chen <br>
 Date: 04/30/2022 <br>
 Class: CS3C <br>
 Instructor: Professor Erin Shaw
