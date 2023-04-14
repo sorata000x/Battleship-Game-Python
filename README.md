@@ -7,7 +7,7 @@ Instructor: Professor Erin Shaw
 
 ### Preview
 
-![game-preview](preview.png)
+<image src="battleship_demo.gif" width="500" />
 
 ### Description
 
